@@ -3,6 +3,14 @@ body {
   background: var(--background, #282c33);
 }
 
+ a {
+    text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -342,10 +350,65 @@ height: -12px;
 
 .footer {
     margin-top: 176px;
-flex-direction: column;
-align-items: center;
-gap: 32px;
-height: 176px;
 border-top: 1px solid #FFF;
 height: 176px;
+padding-top: 32px;
+padding-bottom: 32px;
+}
+
+.lox-1 {
+  color: #fff;
+}
+
+.lox-2 {
+  color: #fff;
+  margin-left: 14px;
+  color: var(--gray, #ABB2BF);
+font-family: Fira Code;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.ueban-1 {
+  color: var(--white, #FFF);
+font-family: Fira Code;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.ueban-2 {
+  margin-top: 80px;
+  color: var(--gray, #ABB2BF);
+font-family: Fira Code;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+.language-switcher a {
+  text-decoration: none;
+  color: #cbc3c3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+}
+.language-switcher a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.language-switcher a.active {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #333;
 }

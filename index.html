@@ -27,6 +27,13 @@
                     <a class="nav-a" href=""><span class="purple">#</span>contacts</a>
                 </li>
             </ul>
+            <ul class="language-switcher">
+                <!-- Ссылки для переключения языка -->
+               <li><a href="#" class="active" onclick="switchLanguage('en')">EN</a></li>
+               <li><a href="#" onclick="switchLanguage('fr')">UA</a></li>
+                <!-- Добавьте больше ссылок, если нужно -->
+            </ul>
+        
         </header>
         <main class="main">
             <section class="hero">
@@ -87,7 +94,7 @@
                         </li>
                         <li class="skils-item">
                             <h3 class="skil-it-ti">Other</h3>
-                            <p class="laung">Html, Css,</p>
+                            <p class="laung">Html, CSS, <br> SCSS</p>
                         </li>
                     </ul>
                 </section>
@@ -107,7 +114,32 @@
                 
         </main>
         <footer class="footer">
-            <br>
+            <div class="container">
+                    <a class="lox-1" href="#">Slavik</a></li>
+                    <a class="lox-2" href="#">elias@elias-dev.ml</a></li>
+                <p class="ueban-1">Web designer and front-end developer</p>
+                <p class="ueban-2">© Copyright 2022. Made by Elias</p>
+            </div>
         </footer>
+        <script>
+            // Функция для переключения языка
+            function switchLanguage(languageCode) {
+                // Перебираем все ссылки в свитчере
+                document.querySelectorAll('.language-switcher a').forEach(function(link) {
+                    // Убираем класс active у всех ссылок
+                    link.classList.remove('active');
+                });
+    
+                // Добавляем класс active к ссылке, которая была выбрана
+                event.target.classList.add('active');
+    
+                // Предотвращаем переход по ссылке (так как она якорная ссылка #)
+                event.preventDefault();
+    
+                // Здесь вы можете добавить код для перенаправления пользователя на другой сайт с выбранным языком
+                // Например:
+                window.location.href = './indexua.html';
+            }
+        </script>
 </body>
 </html>
